@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# TITLE ```TODO```
+# Space Cop
 
-> This project goal is to create a tic tac toe game using only Ruby.
+> This project goal is to create a linter like app on Ruby.
 
 ## Built With
 
@@ -16,13 +16,11 @@
   * Ruby installed
   * A GitHub account
   * A terminal to run the code
-  * A friend to play with. :)
 
 ### Setup
   * Use your GitHub account to clone this repository to your computer.
   * Open the repository files in your terminal.
   * Run main.rb file.
-  * Play.
 
 ### Testing
   ```TODO```
