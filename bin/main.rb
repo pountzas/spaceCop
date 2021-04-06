@@ -8,7 +8,8 @@ return 'No file detected to search for errors.' if file.path.nil?
 file.file_info
 file.last_line
 file.blank_line
-p file.lines
+file.line_length
+#p file.lines
 
 if file.error_list.length.zero?
   puts 'No spece errors have been found, seems you got away from space cop this time'.colorize(:green)

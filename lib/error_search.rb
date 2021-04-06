@@ -1,4 +1,11 @@
 module ErrorSearch
+  def line_length
+    msg = 'Line has to many characters'
+    @lines.each_with_index do |line, x|
+      line.length > 120 ? @error_list << "line:#{x + 1}:0 #{msg}" : false
+    end
+  end
+
   def blank_line
     msg = 'empty line is missing'
     a = %w[def class module for if while unless until]

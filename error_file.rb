@@ -16,6 +16,8 @@ def check_win(player_arr, winning_array)
   control
 end
 
+puts "this line is supposed to be 120 characters length, this line is supposed to be 120 characters. delete last char #"
+
 def design_board(slots)
 "    ¤---¤---¤---¤
     ¦ #{slots[0]} ¦ #{slots[1]} ¦ #{slots[2]} ¦
