@@ -4,6 +4,7 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "./error_file.rb"
 
   DisplayCopNames: true
 
