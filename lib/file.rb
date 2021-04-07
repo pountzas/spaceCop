@@ -9,6 +9,7 @@ class File
     @lines = []
     @total_lines = 0
     @error_list = []
+    @ide = []
   end
 
   def file_info
