@@ -35,7 +35,7 @@ module ErrorSearch
   end
 
   def blank_line
-    msg = 'empty line found error'.colorize(:red)
+    msg = 'empty line error'.colorize(:red)
     a = %w[def class module for if while unless until case]
     @lines.each_with_index do |line, x|
       if a.include?(line.strip.split.first)

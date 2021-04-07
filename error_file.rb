@@ -9,6 +9,7 @@ puts greeting
 puts 'Please enter Player 1 name'
 name1 = gets.chomp.to_s
 until name1.match(/\w{1,10}/)
+  
   puts 'Enter a valid name'
   name1 = gets.chomp.to_s 
   end
