@@ -10,6 +10,7 @@ file.file_info
 file.last_line
 file.blank_line
 file.line_length
+file.trailing
 #p file.lines
 
 if file.error_list.length.zero?

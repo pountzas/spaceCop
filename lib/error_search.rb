@@ -2,7 +2,8 @@ module ErrorSearch
   def trailing
     msg = 'Last character in line has a space'.colorize(:red)
     @lines.each_with_index do |line, x|
-      
+      line[-2] == ' ' ? @error_list << "line:#{x + 1}:0 #{msg}" : false
+    end
   end
 
   def line_length
