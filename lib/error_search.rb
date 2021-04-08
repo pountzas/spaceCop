@@ -6,6 +6,7 @@ module ErrorSearch
     @lines.each_with_index do |line, x|
       line[-2] == ' ' ? @error_list << "line:#{x + 1}:0 #{msg}" : false
     end
+    @error_list
   end
 
   # rubocop: disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
@@ -25,6 +26,7 @@ module ErrorSearch
       ident_is == ident_must * 2 ? false : @error_list << "line:#{x + 1}:0 #{msg} #{ident_is} #{msg2} #{ident_must * 2}"
       ident_must += 1 if a.include?(line.split.first) || line.include?('do') || line[-2] == ('|')
     end
+    @error_list
   end
 
   # rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
@@ -34,6 +36,7 @@ module ErrorSearch
     @lines.each_with_index do |line, x|
       line.length > 120 ? @error_list << "line:#{x + 1}:0 #{msg}" : false
     end
+    @error_list
   end
 
   def blank_line
@@ -46,10 +49,12 @@ module ErrorSearch
         false
       end
     end
+    @error_list
   end
 
   def last_line
     msg = 'Final empty line is missing'.colorize(:red)
     @lines[-1].match?(/\n/) ? false : @error_list << "line:#{@total_lines + 1}:0 #{msg}"
   end
+  @error_list
 end

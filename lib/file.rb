@@ -6,14 +6,8 @@ class File
 
   def initialize(path)
     @path = path
-    @lines = []
-    @total_lines = 0
-    @error_list = []
-    @ide = []
-  end
-
-  def file_info
     @lines = File.readlines(@path)
     @total_lines = lines.length
+    @error_list = []
   end
 end

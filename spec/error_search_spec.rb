@@ -4,35 +4,43 @@ require_relative '../lib/error_search'
 require_relative '../lib/file'
 
 describe File do
-  let(:file) { File.new('error_file.rb') }
+  let(:file) { File.new('.\\error_file.rb') }
 
   describe '#trailing' do
     it 'Checks if the line has trailing space at the end' do
-      expect(file.trailing).to eql([])
+      expect(file.trailing).to eql(["line:10:0 \e[0;31;49mLast character in line has a space\e[0m"])
+    end
+
+    it 'Returns an error' do
+      expect(file.trailing).to_not eql([])
     end
   end
 
   describe '#identation' do
-    it 'checks for the correct identation' do
-      expect(file.identation).to eql([])
+    it 'Returns 3 errors' do
+      expect(file.identation.length).to eql(3)
+    end
+
+    it 'Returns false if it finds other than 3 errors' do
+      expect(file.identation.length).to_not eql(0)
     end
   end
 
   describe '#line_length' do
-    it 'checks if there are more than 120 characters line' do
-      expect(file.identation).to eql([])
+    it 'error if the line has more than 120 characters' do
+      expect(file.line_length).to eql(["line:25:0 \e[0;31;49mLine has more than 120 characters\e[0m"])
     end
   end
 
   describe '#blank_line' do
-    it 'checks if there is a blank line' do
-      expect(file.identation).to eql([])
+    it 'returns an error when the line is not needed' do
+      expect(file.blank_line).to eql(["line:11:0 \e[0;31;49mempty line error\e[0m"])
     end
   end
 
   describe '#last_line' do
-    it 'checks if there is a missing last line' do
-      expect(file.identation).to eql([])
+    it 'returns an error when there is not a last empty line' do
+      expect(file.last_line).to eql(["line:26:0 \e[0;31;49mFinal empty line is missing\e[0m"])
     end
   end
 end

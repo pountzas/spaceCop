@@ -6,7 +6,6 @@ puts "File #{file.path.colorize(:blue)}" + ' is been searched for errors.'.color
 no_file = 'No file detected to search for errors.'.colorize(:red)
 no_file if file.path.nil?
 
-file.file_info
 file.last_line
 file.blank_line
 file.line_length
