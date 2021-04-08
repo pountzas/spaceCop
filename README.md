@@ -16,11 +16,12 @@
   * Ruby installed
   * A GitHub account
   * A terminal to run the code
-
+  * Gem colorize 
 ### Setup
   * Use your GitHub account to clone this repository to your computer.
   * Open the repository files in your terminal. Go to the desired folder and run `` git clone https://github.com/pountzas/spaceCop.git ``
-  * Run /bin/main.rb file.
+  * ``` ruby .\bin\main.rb error_file.rb ```
+  * ``` bundle install ```
 
 ### Testing
   * The Rspec works with the error_file and errors. If it is corrected it will not work
