@@ -4,7 +4,7 @@ require_relative '../lib/error_search'
 require_relative '../lib/file'
 
 describe File do
-  let(:file) { File.new('.\\error_file.rb') }
+  let(:file) { File.new('./error_file.rb') }
 
   describe '#trailing' do
     it 'Checks if the line has trailing space at the end' do
