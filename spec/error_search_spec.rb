@@ -2,7 +2,6 @@
 
 require_relative '../lib/error_search'
 require_relative '../lib/file'
-#require_relative '../error_file'
 
 describe File do
   let(:file) { File.new('error_file.rb') }
