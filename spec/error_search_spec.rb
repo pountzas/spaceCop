@@ -14,13 +14,25 @@ describe File do
   end
 
   describe '#identation' do
-    it 'dfghdfgh' do
+    it 'checks for the correct identation' do
       expect(file.identation).to eql([])
     end
   end
 
   describe '#line_length' do
-    it 'dfghdfgh' do
+    it 'checks if there are more than 120 characters line' do
+      expect(file.identation).to eql([])
+    end
+  end
+
+  describe '#blank_line' do
+    it 'checks if there is a blank line' do
+      expect(file.identation).to eql([])
+    end
+  end
+
+  describe '#last_line' do
+    it 'checks if there is a missing last line' do
       expect(file.identation).to eql([])
     end
   end
