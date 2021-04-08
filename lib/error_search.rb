@@ -1,3 +1,5 @@
+require 'colorize'
+
 module ErrorSearch
   def trailing
     msg = 'Last character in line has a space'.colorize(:red)
@@ -25,7 +27,7 @@ module ErrorSearch
     end
   end
 
-  # rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity:
+  # rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
   def line_length
     msg = 'Line has more than 120 characters'.colorize(:red)

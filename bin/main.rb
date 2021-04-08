@@ -12,6 +12,7 @@ file.blank_line
 file.line_length
 file.trailing
 file.identation
+puts file.line[1].identation
 
 if file.error_list.length.zero?
   puts 'No space errors have been found, seems you got away from Space Cop this time'.colorize(:green)
