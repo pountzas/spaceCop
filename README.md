@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# TITLE ```TODO```
+# Space Cop
 
-> This project goal is to create a tic tac toe game using only Ruby.
+> This project goal is to create a linter like app on Ruby.
 
 ## Built With
 
@@ -11,21 +11,38 @@
 - Git and Github
 
 ## Getting Started
-  ```TODO```
+  
 ### Prerequisites
   * Ruby installed
   * A GitHub account
   * A terminal to run the code
-  * A friend to play with. :)
-
+  * Gem colorize 
 ### Setup
   * Use your GitHub account to clone this repository to your computer.
-  * Open the repository files in your terminal.
-  * Run main.rb file.
-  * Play.
+  * Open the repository files in your terminal. Go to the desired folder and run `` git clone https://github.com/pountzas/spaceCop.git ``
+  * ``` ruby .\bin\main.rb error_file.rb ```
+  * ``` bundle install ```
 
 ### Testing
-  ```TODO```
+  * The Rspec works with the error_file and errors. If it is corrected it will not work
+  * Open your terminal
+  * To install Rspec, run the following command into your terminal: </br>
+  ``` gem install rspec ```
+  * Go to your local project repository with the cd command.
+  * To run the test examples, run the following command into your terminal: </br>
+``` rspec ```
+
+## Documentation
+Here i present good and bad practices.
+### Information
+* To run the code open your terminal
+* ``` ruby .\bin\main.rb error_file.rb ```
+
+``` Bad Practise ```
+![GoodNBadPractices](./photos/Bad.png)
+
+``` Good Practise ```
+![GoodNBadPractices](./photos/good.png)
   
 ## Authors
 
