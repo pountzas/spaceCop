@@ -2,7 +2,7 @@
 
 # Space Cop
 
-> This project goal is to create a linter like app on Ruby.
+> This project goal is to create a Rubocop like app with Ruby.
 
 ## Built With
 
